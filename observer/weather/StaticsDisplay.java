@@ -1,11 +1,13 @@
 package headfirst.observer.weather;
 
+
 import java.util.Observable;
 import java.util.Observer;
 
-import headfirst.observer.weather.WeatherData;
 
-public class StaticsDisplay implements Observer, DisplayElement{ 
+
+public class StaticsDisplay implements Observer, DisplayElement
+{ 
  
  
  Observable observable;      
@@ -84,3 +86,4 @@ public class StaticsDisplay implements Observer, DisplayElement{
  
 
 }
+
