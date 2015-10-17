@@ -7,6 +7,7 @@ public class SMstyleCheesePizza extends Pizza {
   dough = "Thin Crust Dough";
   sauce = "Marinara Sauce";
  
-  
+  toppings.add("Grated Reggiano Cheese");
+  toppings.add("Black Olives");
  }
 }
