@@ -1,27 +1,42 @@
 package headfirst.factory.pizzaaf;
 
-public abstract  class Pizza {
- String name;
- 
-abstract void prepare() {
-  System.out.println("Preparing " + name);
- }
- public void bake() {
-  System.out.println("Baking " + name);
- }
- public void cut() {
-  System.out.println("Cutting " + name);
- }
- public void box() {
-  System.out.println("Boxing " + name);
- }
- public String getName(){
- return name;
- }
- public String toString() {
-System.out.println("---- " + name + " ----\n");
-return name;
-  }
-  
-}
+public abstract class Pizza {
+    String name;
+    Dough dough;
+    Cheese cheese;
+    Potato potato;
 
+    abstract void prepare();
+    void bake() {
+        System.out.println("Bake for 25 minutes at 350");
+    }
+    void cut() {
+        System.out.println("Cutting the pizza into diagonal slices");
+    }
+    void box() {
+        System.out.println("Place pizza in official PizzaStore box");
+    }
+    void setName(String name) {
+        this.name = name;
+    }
+    String getName() {
+        return name;
+    }
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        result.append("---- " + name + " ----\n");
+        if (dough != null) {
+            result.append(dough);
+            result.append("\n");
+        }
+        if (cheese != null) {
+            result.append(cheese);
+            result.append("\n");
+        }
+         if (potato != null) {
+            result.append(potato);
+            result.append("\n");
+        }
+        return result.toString();
+    }
+}
