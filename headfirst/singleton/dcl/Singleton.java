@@ -1,4 +1,3 @@
-
 package headfirst.singleton.dcl;
 
 
